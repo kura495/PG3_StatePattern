@@ -14,7 +14,7 @@ void Enemy::Update() {
 	if (status.pos.y < 0) {
 		status.speed *= -1;
 	}
-	//status.pos.y += status.speed;
+	status.pos.y += status.speed;
 }
 
 void Enemy::Draw() {

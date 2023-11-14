@@ -10,7 +10,7 @@ public:
 	void Draw() override;
 
 	bool GetIsAlive() { return IsAlive; }
-	void OnCollition() { IsAlive = false; }
+	void OnCollision() { IsAlive = false; }
 
 	Status GetStatus() { return status; }
 

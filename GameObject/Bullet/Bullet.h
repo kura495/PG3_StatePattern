@@ -9,6 +9,7 @@ public:
 	void Draw();
 
 	void SetPos(Vector2 position) { status.pos = position; }
+	Status GetStatus() { return status; }
 
 private:
 	Status status;

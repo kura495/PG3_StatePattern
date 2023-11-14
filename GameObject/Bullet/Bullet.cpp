@@ -16,6 +16,6 @@ void Bullet::Update() {
 
 void Bullet::Draw() {
 	Novice::DrawBox(
-	    (int)status.pos.x, (int)status.pos.y, (int)status.size.x, (int)status.size.y, 0.0f, WHITE,
+	    (int)status.pos.x, (int)status.pos.y, (int)status.size.x, (int)status.size.y, 0.0f, GREEN,
 	    kFillModeSolid);
 }

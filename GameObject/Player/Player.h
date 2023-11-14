@@ -10,6 +10,7 @@ public:
 	void Update() override;
 	void Draw() override;
 
+	Status GetBulletStatus() { return bullet_->GetStatus(); }
 
 private:
 	InputManager* inputManager = nullptr;

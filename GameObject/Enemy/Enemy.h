@@ -1,5 +1,6 @@
 #pragma once
 #include "GameObject/BaseCharacter/BaseCharacter.h"
+#include "GameObject/Bullet/Bullet.h"
 #include "Input/InputManager.h"
 
 class Enemy : public BaseCharacter {
@@ -9,8 +10,11 @@ public:
 	void Draw() override;
 
 	bool GetIsAlive() { return IsAlive; }
+	void OnCollition() { IsAlive = false; }
+
 	Status GetStatus() { return status; }
 
 private:
 	bool IsAlive = true;
+
 };

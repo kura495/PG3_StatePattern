@@ -11,15 +11,29 @@ void StageScene::Init() {
 void StageScene::Update() {
 	player_->Update();
 	enemy_->Update();
+	Status BulletStatus = player_->GetBulletStatus();
+	Status EnemyStatus = enemy_->GetStatus();
+	if (enemy_->GetIsAlive() == false) {
+		sceneNo = CLEAR;
+	}
+	if (BulletStatus.pos.x - BulletStatus.size.x < EnemyStatus.pos.x + EnemyStatus.size.x &&
+	    BulletStatus.pos.x + BulletStatus.size.x > EnemyStatus.pos.x - EnemyStatus.size.x &&
+	    BulletStatus.pos.y - BulletStatus.size.y < EnemyStatus.pos.y + EnemyStatus.size.y &&
+	    BulletStatus.pos.y + BulletStatus.size.y > EnemyStatus.pos.y - EnemyStatus.size.y
+		) {
+		enemy_->OnCollition();
+	}
+
+	
+
 }
 
 void StageScene::Draw() { 
 	ImGui::Begin("Stage");
-	ImGui::Text("SPACE Change State");
+	ImGui::Text("Move : Arrow key");
+	ImGui::Text("Shot : SPACE key");
 	ImGui::End();
-	if (inputManager->IsTriggerKey(DIK_SPACE)) {
-		sceneNo = CLEAR;
-	}
+
 	player_->Draw();
 	enemy_->Draw();
 }

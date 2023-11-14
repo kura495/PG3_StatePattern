@@ -14,11 +14,12 @@ void Enemy::Update() {
 	if (status.pos.y < 0) {
 		status.speed *= -1;
 	}
-	status.pos.y += status.speed;
+	//status.pos.y += status.speed;
 }
 
 void Enemy::Draw() {
-	Novice::DrawBox(
-	    (int)status.pos.x, (int)status.pos.y, (int)status.size.x, (int)status.size.y, 0.0f, BLUE,
-	    kFillModeSolid);
+	if (IsAlive) {
+		Novice::DrawBox((int)status.pos.x, (int)status.pos.y, (int)status.size.x, (int)status.size.y, 0.0f,
+		    BLUE, kFillModeSolid);
+	}
 }

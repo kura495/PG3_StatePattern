@@ -1,7 +1,7 @@
 #pragma once
 #include <Novice.h>
 #include "Vector2.h"
-struct Character {
+struct Status {
 	Vector2 pos;
 	Vector2 size;
 	float speed;
@@ -15,5 +15,5 @@ public:
 	virtual void Draw() = 0;
 
 protected:
-	Character status;
+	Status status;
 };

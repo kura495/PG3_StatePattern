@@ -1,9 +1,12 @@
 #include <Novice.h>
+#include "GameManager/GameManager.h"
 
 const char kWindowTitle[] = "k022g1060";
 
 // Windowsアプリでのエントリーポイント(main関数)
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
+
+	GameManager* gameManager = new GameManager();
 
 	// ライブラリの初期化
 	Novice::Initialize(kWindowTitle, 1280, 720);
@@ -24,7 +27,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 		/// ↓更新処理ここから
 		///
-
+		gameManager->Update();
 		///
 		/// ↑更新処理ここまで
 		///
@@ -32,7 +35,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 		/// ↓描画処理ここから
 		///
-
+		gameManager->Draw();
 		///
 		/// ↑描画処理ここまで
 		///

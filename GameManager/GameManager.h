@@ -1,6 +1,7 @@
 #pragma once
 #include <memory>
 #include "Scenes/TitleScene.h"
+#include "Scenes/StageScene.h"
 
 class GameManager {
 public:
@@ -19,5 +20,5 @@ private:
 	int currentSceneNo_;
 	int prevSceneNo_;
 
-
+	InputManager* inputManager = nullptr;
 };

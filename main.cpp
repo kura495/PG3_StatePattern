@@ -6,7 +6,8 @@ const char kWindowTitle[] = "k022g1060";
 // Windowsアプリでのエントリーポイント(main関数)
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
-	GameManager* gameManager = new GameManager();
+	
+
 
 	// ライブラリの初期化
 	Novice::Initialize(kWindowTitle, 1280, 720);
@@ -14,6 +15,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	// キー入力結果を受け取る箱
 	char keys[256] = {0};
 	char preKeys[256] = {0};
+	
+	GameManager* gameManager = new GameManager();
 
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {

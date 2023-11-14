@@ -3,7 +3,11 @@
 GameManager::GameManager() {
 	
 	sceneArr_[TITLE] = std::make_unique<TitleScene>();
+	sceneArr_[STAGE] = std::make_unique<StageScene>();
 	currentSceneNo_ = TITLE;
+	sceneArr_[TITLE]->Init();
+	inputManager = InputManager::GetInstance();
+	inputManager->Init();
 }
 
 GameManager::~GameManager() {}
@@ -11,6 +15,7 @@ GameManager::~GameManager() {}
 //void GameManager::Init() {}
 
 void GameManager::Update() { 
+	inputManager->Update();
 	prevSceneNo_ = currentSceneNo_;
 	currentSceneNo_ = sceneArr_[currentSceneNo_]->GetSceneNo();
 	if (prevSceneNo_ != currentSceneNo_) {
@@ -21,7 +26,8 @@ void GameManager::Update() {
 }
 
 void GameManager::Draw() { 
-	sceneArr_[currentSceneNo_]->Draw(); }
+	sceneArr_[currentSceneNo_]->Draw(); 
+}
 
 
 

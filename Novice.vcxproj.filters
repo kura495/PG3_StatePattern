@@ -20,6 +20,9 @@
     <Filter Include="Scenes">
       <UniqueIdentifier>{932132f3-d7b8-493d-ac6b-2f2c1824f2f4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameManager">
+      <UniqueIdentifier>{1860973d-214a-42f8-ac6c-ad0b1c3918d3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
@@ -46,6 +49,9 @@
     </ClCompile>
     <ClCompile Include="Scenes\IScene.cpp">
       <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager\GameManager.cpp">
+      <Filter>GameManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +128,9 @@
     </ClInclude>
     <ClInclude Include="Scenes\IScene.h">
       <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager\GameManager.h">
+      <Filter>GameManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

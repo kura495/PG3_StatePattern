@@ -16,8 +16,5 @@ protected:
 private:
 };
 
-IScene::IScene() {}
 
-IScene::~IScene() {}
 
-inline int IScene::GetSceneNo() { return 0; }

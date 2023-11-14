@@ -2,6 +2,7 @@
 #include <memory>
 #include "Scenes/TitleScene.h"
 #include "Scenes/StageScene.h"
+#include "Scenes/ClearScene.h"
 
 class GameManager {
 public:

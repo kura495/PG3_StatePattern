@@ -1,7 +1,6 @@
 #include "TitleScene.h"
 
 void TitleScene::Init() { 
-	sceneNo = TITLE;
 	inputManager = InputManager::GetInstance();
 }
 

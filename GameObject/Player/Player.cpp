@@ -2,7 +2,7 @@
 
 void Player::Init() { 
 	inputManager = InputManager::GetInstance();
-
+	bullet_->Init();
 	BaseCharacter::status.pos = {50,300};
 	BaseCharacter::status.size = {32,32};
 	BaseCharacter::status.speed = 5.0f;
@@ -21,6 +21,9 @@ void Player::Update() {
 	}
 	if (inputManager->IsPressKey(DIK_RIGHT)) {
 		status.pos.x += status.speed;
+	}
+	if (inputManager->IsTriggerKey(DIK_SPACE)) {
+		bullet_->SetPos(status.pos);
 	}
 
 }

@@ -23,6 +23,18 @@
     <Filter Include="GameManager">
       <UniqueIdentifier>{1860973d-214a-42f8-ac6c-ad0b1c3918d3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\BaseCharacter">
+      <UniqueIdentifier>{340b42e7-b5a5-4419-87a2-f390607b5fad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Player">
+      <UniqueIdentifier>{e221ed90-3595-4ced-b698-651dcf417964}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Enemy">
+      <UniqueIdentifier>{0c7b9efc-e491-495c-9eda-7415761edfb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Bullet">
+      <UniqueIdentifier>{5ea44d42-fea0-42e1-92ca-ef43c28d478b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
@@ -55,6 +67,24 @@
     </ClCompile>
     <ClCompile Include="Scenes\TitleScene.cpp">
       <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\InputManager.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\Enemy\Enemy.cpp">
+      <Filter>GameObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\Player\Player.cpp">
+      <Filter>GameObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\StageScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\ClearScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\Bullet\Bullet.cpp">
+      <Filter>GameObject\Bullet</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +167,25 @@
     </ClInclude>
     <ClInclude Include="Scenes\TitleScene.h">
       <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\InputManager.h" />
+    <ClInclude Include="GameObject\BaseCharacter\BaseCharacter.h">
+      <Filter>GameObject\BaseCharacter</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\ClearScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\Enemy\Enemy.h">
+      <Filter>GameObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\Player\Player.h">
+      <Filter>GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\StageScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\Bullet\Bullet.h">
+      <Filter>GameObject\Bullet</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

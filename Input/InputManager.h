@@ -11,6 +11,7 @@ public:
 	//void Draw();
 
 	bool IsTriggerKey(BYTE KeyNumber);
+	bool IsPressKey(BYTE KeyNumber);
 
 private:
 	InputManager() = default;

@@ -18,3 +18,6 @@ void InputManager::Update() {
 bool InputManager::IsTriggerKey(BYTE KeyNumber) { 
 	return preKeys[KeyNumber] == 0 && Keys[KeyNumber] != 0;
 }
+bool InputManager::IsPressKey(BYTE KeyNumber) { 
+	return Keys[KeyNumber] != 0;
+}

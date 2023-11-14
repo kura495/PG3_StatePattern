@@ -1,17 +1,14 @@
 #pragma once
-#include <memory>
-#include "IScene.h"
-#include "ImGuiManager.h"
+#include "GameObject/BaseCharacter/BaseCharacter.h"
 #include "Input/InputManager.h"
-#include "GameObject/Player/Player.h"
 
-class StageScene :public IScene {
+class Player :public BaseCharacter {
 public:
 	void Init() override;
 	void Update() override;
 	void Draw() override;
 
+
 private:
 	InputManager* inputManager = nullptr;
-	std::unique_ptr<Player> player_;
 };
